@@ -1,0 +1,476 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+#include "verrsrc.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "#include ""verrsrc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#include ""res\\PlaneGame.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\PlaneGame.ico"
+IDR_PlaneGameTYPE       ICON                    "res\\PlaneGameDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "重新开始(&R)\tF2",                ID_RESTART
+        MENUITEM "保存(&S)\tCtrl+S",              ID_SAVE
+        MENUITEM "读取(&A)\tCtrl+R",              ID_READ
+        MENUITEM SEPARATOR
+        MENUITEM "暂停/继续(&P)\tEnter",            ID_PAUSE
+    END
+    POPUP "游戏(&S)"
+    BEGIN
+        MENUITEM "参数修改器(&C)...\tCtrl+C",        ID_SET
+        MENUITEM "作弊器(&S)...\tCtrl+B",          ID_SETLEVEL
+        MENUITEM "随机数控制器(R)...\tCtrl+Q",        ID_RAND
+        MENUITEM SEPARATOR
+        MENUITEM "Debug模式(&D)\tCtrl+D",         ID_DEBUG, CHECKED
+        MENUITEM "无敌模式(&I)\tCtrl+I",            ID_IMMUNE, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "关于 PlaneGame(&A)...",         ID_APP_ABOUT
+        MENUITEM "帮助(&H)...\t F2",              ID_32800
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "D",            ID_DEBUG,               VIRTKEY, CONTROL, NOINVERT
+    "I",            ID_IMMUNE,              VIRTKEY, CONTROL, NOINVERT
+    VK_RETURN,      ID_PAUSE,               VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    "R",            ID_READ,                VIRTKEY, CONTROL, NOINVERT
+    VK_F2,          ID_RESTART,             VIRTKEY, NOINVERT
+    "S",            ID_SAVE,                VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_SET,                 VIRTKEY, CONTROL, NOINVERT
+    "B",            ID_SETLEVEL,            VIRTKEY, CONTROL, NOINVERT
+    "Q",            ID_RAND,                VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 PlaneGame"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,20,20
+    LTEXT           "PlaneGame，1.2 版",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2015",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "确定",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_LEVELDIG DIALOGEX 0, 0, 229, 141
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "作弊器"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,110,120,50,14
+    PUSHBUTTON      "取消",IDCANCEL,172,120,50,14
+    LTEXT           "跳转关卡：",IDC_STATIC,37,28,48,8
+    EDITTEXT        IDC_LEVEL,98,25,64,14,ES_AUTOHSCROLL
+    LTEXT           "当前HP：",IDC_STATIC,36,54,46,8
+    EDITTEXT        IDC_HP,98,50,64,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NUCLEAR,97,74,64,14,ES_AUTOHSCROLL
+    LTEXT           "核武器数量：",IDC_STATIC,36,76,57,8
+    LTEXT           " 子弹威力：",IDC_STATIC,35,98,57,8
+    EDITTEXT        IDC_POWER,95,97,64,14,ES_AUTOHSCROLL
+END
+
+IDD_SET DIALOGEX 0, 0, 309, 216
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "设置参数"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,198,195,50,14
+    PUSHBUTTON      "取消",IDCANCEL,252,195,50,14
+    LTEXT           "初始值",IDC_STATIC,109,15,30,11
+    LTEXT           "难度修正量",IDC_STATIC,165,16,45,8
+    LTEXT           "BOSS血量",IDC_STATIC,24,38,53,11
+    EDITTEXT        IDC_EDIT1,100,36,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,163,36,52,14,ES_AUTOHSCROLL
+    LTEXT           "BOSS发射子弹几率",IDC_STATIC,22,60,72,11
+    EDITTEXT        IDC_SHOTCHANCE,99,58,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ISHOTCHANCE,163,57,52,14,ES_AUTOHSCROLL
+    LTEXT           "BOSS乱射时数量",IDC_STATIC,23,82,72,11
+    EDITTEXT        IDC_SHOTSUM1,99,79,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SHOTSUM2,163,78,52,14,ES_AUTOHSCROLL
+    LTEXT           "精英发射子弹几率",IDC_STATIC,21,103,72,11
+    EDITTEXT        IDC_SHOTCHANCE4,163,101,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SHOTCHANCE3,101,100,52,14,ES_AUTOHSCROLL
+    LTEXT           "精英机产生几率",IDC_STATIC,22,127,61,10
+    EDITTEXT        IDC_ELITECHANCE2,163,121,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ELITECHANCE1,101,121,52,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "恢复默认值",IDRESET,15,195,50,14
+    LTEXT           "BOSS出现时间",IDC_STATIC,25,148,72,11
+    EDITTEXT        IDC_BOSSTIMER1,102,144,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BOSSTIMER2,163,144,52,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "保存‘",IDSAVE,79,195,50,14
+    PUSHBUTTON      "读取",IDREAD,138,195,50,14
+    LTEXT           "普通机发射子弹几率",IDC_STATIC,21,169,73,8
+    EDITTEXT        IDC_GENSSHOTCHANCE1,102,166,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GENSSHOTCHANCE2,163,167,52,14,ES_AUTOHSCROLL
+END
+
+IDD_RAND DIALOGEX 0, 0, 267, 176
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,165,155,50,14
+    PUSHBUTTON      "取消",IDCANCEL,217,155,50,14
+    LTEXT           "我机受伤时减少威力的概率",IDC_STATIC,23,33,115,11
+    LTEXT           "我机发射追踪子弹的概率",IDC_STATIC,22,52,115,11
+    LTEXT           "敌军死亡掉落物品的概率",IDC_STATIC,23,70,115,11
+    LTEXT           "精英机特殊子弹概率",IDC_STATIC,23,87,115,11
+    LTEXT           "刷新敌机时产生客机的概率",IDC_STATIC,23,106,115,11
+    LTEXT           "从屏幕下方出现敌机的概率",IDC_STATIC,21,122,115,11
+    EDITTEXT        IDC_OPOWERDOWN,149,30,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_OSEEK,148,50,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_OIAPPEARTEM,148,66,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_OAPPEARDOWN,148,121,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_OAPPEARAIRLINER,148,102,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_OSPECIAL,147,83,52,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "恢复默认",IDC_BUTTON1,7,155,50,14
+    PUSHBUTTON      "保存",IDC_BUTTON2,59,155,50,14
+    PUSHBUTTON      "读取",IDC_BUTTON3,113,155,50,14
+    LTEXT           "客机跳伞的概率",IDC_STATIC,22,138,115,11
+    EDITTEXT        IDC_OJUMP,148,137,52,14,ES_AUTOHSCROLL
+END
+
+IDD_HELP DIALOGEX 0, 0, 309, 197
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,252,176,50,14
+    LTEXT           "帮助文档：\n\n本游戏键盘控制  以上下左右控制我方飞机方向，空格发射子弹，Z发射核武器\n",IDC_STATIC,15,17,273,31
+    LTEXT           "敌机有7种 1种普通飞机和6种精英飞机 精英飞机都有自己的特殊子弹发射方式",IDC_STATIC,16,48,273,8
+    LTEXT           "游戏可以通过作弊器来修改当前我方飞机的状态,也可以通过参数设置和随机数设置来改变可玩性,但是这些数值如果超出一定数值，游戏可能出现不可预见的结果\n\n游戏可以通过保存来记录当前的状态甚至是你定义的参数和随机器，并且在任何时候返回，你可以备份这些文件，但并不建议你改动这些数据，这么做的结果通常是游戏报错或是崩溃\n",IDC_STATIC,15,81,278,29
+    LTEXT           "游戏可以通过保存来记录当前的状态甚至是你定义的参数和随机器，并且在任何时候返回，\n你可以备份这些文件，但并不建议你改动这些数据，这么做的结果通常是游戏报错或是崩溃\n",IDC_STATIC,15,114,278,37
+    LTEXT           "可获得的物品有4种 分别可以：增加HP，增加核武器数量，暂时免疫和增加子弹威力",IDC_STATIC,15,61,278,17
+    LTEXT           "更多的功能和具体的数值，还是在游戏里进行体验吧！",IDC_STATIC,17,158,231,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "TODO:  <公司名>"
+            VALUE "FileDescription", "PlaneGame"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "PlaneGame.exe"
+            VALUE "LegalCopyright", "TODO:  (C) <公司名>。  保留所有权利。"
+            VALUE "OriginalFilename", "PlaneGame.exe"
+            VALUE "ProductName", "TODO:  <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_LEVELDIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 134
+    END
+
+    IDD_SET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 209
+    END
+
+    IDD_RAND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 169
+    END
+
+    IDD_HELP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 190
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_MYPLANE             BITMAP                  "image\\me.bmp"
+IDB_GENENEMY            BITMAP                  "image\\enemy.bmp"
+IDB_ENEMYBULLET         BITMAP                  "image\\ball.BMP"
+IDB_BOOM                BITMAP                  "image\\explosion.BMP"
+IDB_BACKGROUND          BITMAP                  "image\\stars-in-space-wallpaper-533459b3e37e2.bmp"
+IDB_ELITEENEMY          BITMAP                  "image\\elite.bmp"
+IDB_BOSS                BITMAP                  "image\\boss.bmp"
+IDB_AIRLINER            BITMAP                  "image\\客机.bmp"
+IDB_ITEM                BITMAP                  "image\\stren.bmp"
+IDB_MYBULLET            BITMAP                  "image\\bombs.bmp"
+IDB_IMMUNE              BITMAP                  "image\\bigboom.bmp"
+IDB_SEEKING             BITMAP                  "image\\bo20.bmp"
+IDB_WITHEGEN            BITMAP                  "image\\enemy_impact.bmp"
+IDB_WHITEELITE          BITMAP                  "image\\elite2.bmp"
+IDB_WHITEBOSS           BITMAP                  "image\\boss2.bmp"
+IDB_BOOMAREA            BITMAP                  "image\\新建位图图像.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE 初始化失败。  请确保 OLE 库是正确的版本。"
+END
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "PlaneGame\n\nPlaneGame\nPlaneGame Files (*.data)\n.data\nPlaneGame.Document\nPlaneGame.Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "PlaneGame"
+    AFX_IDS_IDLEMESSAGE     "就绪"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "创建新文档\n新建"
+    ID_FILE_OPEN            "打开现有文档\n打开"
+    ID_FILE_CLOSE           "关闭活动文档\n关闭"
+    ID_FILE_SAVE            "保存活动文档\n保存"
+    ID_FILE_SAVE_AS         "用新名称保存活动文档\n另存为"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "显示程序信息、版本号和版权信息\n关于"
+    ID_APP_EXIT             "退出应用程序；提示保存文档\n退出"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "打开此文档"
+    ID_FILE_MRU_FILE2       "打开此文档"
+    ID_FILE_MRU_FILE3       "打开此文档"
+    ID_FILE_MRU_FILE4       "打开此文档"
+    ID_FILE_MRU_FILE5       "打开此文档"
+    ID_FILE_MRU_FILE6       "打开此文档"
+    ID_FILE_MRU_FILE7       "打开此文档"
+    ID_FILE_MRU_FILE8       "打开此文档"
+    ID_FILE_MRU_FILE9       "打开此文档"
+    ID_FILE_MRU_FILE10      "打开此文档"
+    ID_FILE_MRU_FILE11      "打开此文档"
+    ID_FILE_MRU_FILE12      "打开此文档"
+    ID_FILE_MRU_FILE13      "打开此文档"
+    ID_FILE_MRU_FILE14      "打开此文档"
+    ID_FILE_MRU_FILE15      "打开此文档"
+    ID_FILE_MRU_FILE16      "打开此文档"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
+    ID_PREV_PANE            "切换回上一个窗格\n上一窗格"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "将活动窗口拆分为多个窗格\n拆分"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "清除所选内容\n清除"
+    ID_EDIT_CLEAR_ALL       "清除全部内容\n全部清除"
+    ID_EDIT_COPY            "复制所选内容，将其放入剪贴板\n复制"
+    ID_EDIT_CUT             "剪切所选内容，将其放入剪贴板\n剪切"
+    ID_EDIT_FIND            "查找指定的文本\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一操作\n重复"
+    ID_EDIT_REPLACE         "用其他文本替换特定的文本\n替换"
+    ID_EDIT_SELECT_ALL      "选定整个文档\n全选"
+    ID_EDIT_UNDO            "撤消上一操作\n撤消"
+    ID_EDIT_REDO            "重做上次撤消的操作\n重做"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "更改窗口大小"
+    AFX_IDS_SCMOVE          "更改窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小成图标"
+    AFX_IDS_SCMAXIMIZE      "将窗口放大到最大尺寸"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到上一个文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动窗口并提示保存文档"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "将窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务列表"
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#include "res\PlaneGame.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,23 @@
+1：debug模式是否开启
+2：关卡难度
+3：当前积分
+4：计时器
+5：我机X坐标 我机Y坐标 我机HP 免疫模式是否开启
+6：爆炸位置1X坐标 爆炸位置1Y坐标 爆炸位置1图片计数器 ...
+7：敌军1X坐标 敌军1Y坐标 敌军1X速度 敌军1Y速度 敌军1类型 敌军1HP ...
+8：物品1X坐标 物品1Y坐标 物品1X速度 物品1Y速度 物品1类型 ...
+9：客机1X坐标 客机1Y坐标 客机1X速度 客机1Y速度 客机1HP
+10：窗口宽 窗口长
+
+
+带...表示这是一个链表
+类型是唯一的标识符
+以下是部分标识（可能有不包含的define）
+
+#define MY_BULLET 		1
+#define	ENEMY_BULLET 		2
+#define GEN_ENEMY_PLANE		3
+#define	ELITE_ENEMY_PLANE	4
+#define	MY_PLANE		5
+#define BOSS			6
+#define	ITEM			7
